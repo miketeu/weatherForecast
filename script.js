@@ -2,7 +2,14 @@ $(document).ready(function () {
   //let appiKey1 = e1f97b83ade972f3c39403efd7d09291;
   var APIKey = "06389e82d23da07eea5ee0de5cb55be8";
 
-  //url: request city to retrieve the data for.
+ // Present date and time
+    //Use UK time and date format.
+    setInterval(function () {
+      $("#currentTime").text(moment().format("LLLL"));
+    }, 1000);
+
+
+  // request the city to retrieve data for.
   var city = "#submit-search, GB";
 
   //data: data to be sent to the server with the request as a query string.
@@ -10,8 +17,7 @@ $(document).ready(function () {
   fetch(
     "http://api.openweathermap.org/geo/1.0/direct?q=" +
       city +
-      "GB&limit=5&appid=" +
-      APIKey
+      "&limit=5&appid=" + APIKey
   )
     .then((response) => response.json())
     .then((citiesFound) => {
