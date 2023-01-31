@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //let appiKey1 = e1f97b83ade972f3c39403efd7d09291;
-  var APIKey = "06389e82d23da07eea5ee0de5cb55be8";
+  var APIKey = "e1f97b83ade972f3c39403efd7d09291";
 
  // Present date and time
     //Use UK time and date format.
@@ -28,7 +28,7 @@ $(document).ready(function () {
       //callback: function to be executed when request succeeds.
 
       return fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}direct?q=London,GB&limit=5&appid=06389e82d23da07eea5ee0de5cb55be8`
+        `http://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&limit=5&appid=${APIKey}`
       );
     })
     .then((response) => response.json())
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
       // show data on to html
 
-      data.map(function (City) {
+      data.map(function (city) {
         let li = document.createElement("li");
         let firstCity = document.createElement("p");
       });
