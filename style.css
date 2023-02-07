@@ -1,4 +1,31 @@
-#today {
+
+
+
+#search-button {
     background-color: darkblue;
     color: antiquewhite;
+    width: 14rem;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+#search-input {
+    width: 14rem;
+    margin-left: 10px;
+}
+.card {
+    margin-left: auto;
+    width: 65%;
+    height: fit-content;
+    border: 2px solid black;
+}
+
+.weather-hr {
+    height:4px;
+    border-width:0;
+    color:rgb(15, 2, 2);
+    background-color:gray;
+}
+#today {
+    border: 2px solid rgb(110, 105, 105);
+    height: 10em;
 }
